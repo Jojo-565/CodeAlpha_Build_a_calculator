@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+        <div class="wheel"></div>
+        <div class="hamster">
+            <div class="hamster__body">
+                <div class="hamster__head">
+                    <div class="hamster__ear"></div>
+                    <div class="hamster__eye"></div>
+                    <div class="hamster__nose"></div>
+                </div>
+                <div class="hamster__limb hamster__limb--fr"></div>
+                <div class="hamster__limb hamster__limb--fl"></div>
+                <div class="hamster__limb hamster__limb--br"></div>
+                <div class="hamster__limb hamster__limb--bl"></div>
+                <div class="hamster__tail"></div>
+            </div>
+        </div>
+        <div class="spoke"></div>
+    </div>
+      
+    <div class="calculator">
+        <input type="text" class="display" id="display" value="0" readonly>
+
+        <div class="buttons">
+            <!-- Calculator buttons -->
+            <button class="button gray" onclick="clearDisplay()"><span>AC</span></button>
+            <button class="button gray" onclick="appendToDisplay('√')"><span>√</span></button>
+            <button class="button gray" onclick="appendToDisplay('%')"><span>%</span></button>
+            <button class="button yellow" onclick="appendToDisplay('/')"><span>÷</span></button>
+            <button class="button gray" onclick="appendToDisplay('7')"><span>7</span></button>
+            <button class="button gray" onclick="appendToDisplay('8')"><span>8</span></button>
+            <button class="button gray" onclick="appendToDisplay('9')"><span>9</span></button>
+            <button class="button yellow" onclick="appendToDisplay('*')"><span>×</span></button>
+            <button class="button gray" onclick="appendToDisplay('4')"><span>4</span></button>
+            <button class="button gray" onclick="appendToDisplay('5')"><span>5</span></button>
+            <button class="button gray" onclick="appendToDisplay('6')"><span>6</span></button>
+            <button class="button yellow" onclick="appendToDisplay('-')"><span>-</span></button>
+            <button class="button gray" onclick="appendToDisplay('1')"><span>1</span></button>
+            <button class="button gray" onclick="appendToDisplay('2')"><span>2</span></button>
+            <button class="button gray" onclick="appendToDisplay('3')"><span>3</span></button>
+            <button class="button yellow" onclick="appendToDisplay('+')"><span>+</span></button>
+            <button class="button gray" onclick="appendToDisplay('0')"><span>0</span></button>
+            <button class="button gray" onclick="appendToDisplay('.')"><span>.</span></button>
+            <button class="button gray" onclick="toggleSign()"><span>+/-</span></button>
+            <button class="button yellow" onclick="calculateResult()"><span>=</span></button>
+        </div>
+
+        <!-- History Button -->
+        <button class="button history-toggle" onclick="toggleHistory()">Show History</button>
+
+        <!-- History Section -->
+        <div class="history" id="historySection" style="display: none;">
+            <h3>History</h3>
+            <ul id="historyList"></ul>
+        </div>
+
+       
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
